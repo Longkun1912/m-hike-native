@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/hikeList_title"
+            android:text="All Hikes"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            tools:ignore="MissingConstraints" />
+
+        <SearchView
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:queryHint="Search Hike Name"
+            android:iconifiedByDefault="false"
+            android:layout_margin="16sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="100sp">
+
+            <TextView
+                android:id="@+id/hikeName_title"
+                android:textSize="25sp"
+                android:layout_marginLeft="40sp"
+                android:layout_width="100dp"
+                android:layout_height="100sp"
+                android:text="Name"
+                android:gravity="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/hikeLevel_title"
+                android:textSize="25sp"
+                android:layout_marginLeft="120sp"
+                android:layout_width="200dp"
+                android:layout_height="100sp"
+                android:text="Difficulty"
+                android:gravity="center"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_marginBottom="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="450sp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="450sp"
+                android:orientation="vertical">
+
+                <ListView
+                    android:id="@+id/hike_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="450sp">
+                </ListView>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</LinearLayout>
+
+

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/updateObservation_title"
+                android:text="Update Observation"
+                android:textSize="40sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginLeft="50sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:text="Name of the observation:"
+                android:textSize="25sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="50sp" />
+
+            <EditText
+                android:id="@+id/input_observationName"
+                android:hint="Enter the observation name"
+                android:layout_marginLeft="20sp"
+                android:layout_width="300sp"
+                android:layout_height="50sp"/>
+
+            <TextView
+                android:text="Date encounter:"
+                android:textSize="25sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="50sp" />
+
+            <CalendarView
+                android:id="@+id/observation_dateInput"
+                android:layout_marginLeft="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="Time encounter:"
+                android:textSize="25sp"
+                android:layout_marginLeft="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="50sp" />
+
+            <TimePicker
+                android:id="@+id/observation_timeInput"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="Additional comment:"
+                android:textSize="25sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginTop="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="50sp" />
+
+            <EditText
+                android:id="@+id/input_observationComment"
+                android:hint="Any additional comment is appreciated."
+                android:layout_marginLeft="20sp"
+                android:layout_width="300sp"
+                android:layout_height="50sp"/>
+
+            <LinearLayout
+                android:layout_marginTop="20sp"
+                android:layout_marginBottom="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/confirmUpdate_observation"
+                    android:layout_marginLeft="20sp"
+                    android:layout_width="180sp"
+                    android:text="Confirm updating"
+                    android:layout_height="70sp"/>
+
+
+                <Button android:id="@+id/back_to_observationDetails"
+                    android:layout_marginLeft="20sp"
+                    android:layout_width="180sp"
+                    android:text="Cancel and back"
+                    android:layout_height="70sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
